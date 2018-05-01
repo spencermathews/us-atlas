@@ -14,7 +14,6 @@ geo2topo -q 1e5 -n counties=<( \
       | ndjson-filter '!/000$/.test(d.properties.GEOID)' \
       | ndjson-map '(d.id = d.properties.GEOID, d)' \
       | geostitch -n) \
-  | toposimplify -f -p 0.25 \
   | topomerge states=counties -k 'd.id.slice(0, 2)' \
   | topomerge nation=states \
   > us/10m.json
