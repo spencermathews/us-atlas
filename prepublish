@@ -12,7 +12,7 @@ fi
 geo2topo -q 1e5 -n counties=<( \
     shp2json -n build/cb_2017_us_county_5m.shp \
       | ndjson-filter '!/000$/.test(d.properties.GEOID)' \
-      | ndjson-map '(d.id = d.properties.GEOID, d)' \
+      | ndjson-map '(d.id = d.properties.GEOID, name = d.properties.NAME, d.properties = {}, d.properties.name = name, d)' \
       | geostitch -n) \
   | topomerge states=counties -k 'd.id.slice(0, 2)' \
   | topomerge nation=states \
