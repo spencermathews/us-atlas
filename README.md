@@ -1,3 +1,10 @@
+# Changes in this fork
+
+* remove projection, note original shapefile in X and TopoJSON in Y, which is standard for GeoJSON...?
+
+
+---
+
 # U.S. Atlas TopoJSON
 
 This repository provides a convenient mechanism for generating TopoJSON files from the [Census Bureau’s](http://www.census.gov/) [cartographic boundary shapefiles](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), 2015 edition.
