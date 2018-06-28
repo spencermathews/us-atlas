@@ -1,7 +1,27 @@
 # Changes in this fork
 
+##
+
 * remove projection, note original shapefile in X and TopoJSON in Y, which is standard for GeoJSON...?
 
+## Data Sources
+
+`cb_2017_us_county_5m` contains the following:
+
+    AFFGEOID  '0500000US06113'
+    ALAND     2628256658
+    AWATER    22688556
+    COUNTYFP  '113'
+    COUNTYNS  '00277321'
+    GEOID     '06113'
+    LSAD      '06'
+    NAME      'Yolo'
+    STATEFP   '06'
+
+`state.txt` contains FIPS codes as follows:
+
+    STATE|STUSAB|STATE_NAME|STATENS
+    06|CA|California|01779778
 
 ---
 

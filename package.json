@@ -18,6 +18,7 @@
   },
   "scripts": {
     "prepare": "bash prepublish",
+    "fips": "node fips.js",
     "postpublish": "git push && git push --tags && cd ../d3.github.com && git pull && cp ../us-atlas/us/10m.json us-10m.v1.json && git add us-10m.v1.json && git commit -m \"us-atlas ${npm_package_version}\" && git push && cd -"
   },
   "devDependencies": {
@@ -28,5 +29,8 @@
     "topojson-server": "^3.0.0",
     "topojson-client": "^3.0.0",
     "topojson-simplify": "^3.0.0"
+  },
+  "bin": {
+    "fips": "./fips.js"
   }
 }
